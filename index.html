@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/popups.css">
+    <title>Desafío N° 15</title>
+</head>
+<body>       
+    <div class="form_container" >            
+        <form>
+            <label class="form_title">
+                Calculadora
+            </label>
+            <div class="form_content">
+                <div class="calculator__display" >
+                    <span class="calculator__display--operation" id="idOperation">Esperando operación</span>
+                    <span class="calculator__display--result" id="idOperationResult">0</span>
+                </div>
+                <div class="flex_container-multiColumn">      
+                    <div class="flex_container-column">
+                        <div class="flex_container-c">
+                            <input class="txt__align--right" type="text" autocomplete="off"  name="idFirstValue" id="idFirstValue" placeholder="Ingreso Número">
+                        </div>
+                        <p class="erroMessage hidden txt__align--right" id="idFirstValueMsgError"></p>
+                        
+                    </div>
+                    <div class="flex_container-column">
+                        <div class="flex_container-c">
+                           <input class="txt__align--right " type="text" autocomplete="off"  name="idSecondValue" id="idSecondValue" placeholder="Ingreso Número">
+                        </div>
+                        <p class="erroMessage hidden txt__align--right" id="idSecondValueMsgError"></p>
+                    </div>
+                    <div class="btn__form--container">
+                        <button type="submit" name="add" id="idBtnAdd">+</button>
+                        <button type="submit" name="substract" id="idBtnSubtract">-</button>
+                        <button type="submit" name="multiply" id="idBtnMultiply">x</button>
+                        <button type="submit" name="split" id="idBtnSplit">÷</button>
+                        
+                        <button class="btn_danger" type="button" id="idBtnReset">Reset</button>
+                        <button class="btn_success" type="button" id="idBtnHelp">?</button>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="btn_formContainer">
+                
+            </div>
+        </form> 
+    </div>
+    <hr>
+    <div class="form_container" >            
+        <form>
+            <label class="form_title">
+                Historial de Errores
+            </label>
+            <p class="erroMessageHistory" id="idErrores"></p>
+        </form>
+    </div>
+    
+     <!-- Popup -->
+     <div id="popup" class="popup">
+        <div class="popup-contenido">
+            <p id="idPopupMsg"></p>
+            <button onclick="ocultarPopup()">Cerrar</button>
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
+    <script src="./js/validations.js"></script>    
+    <script src="./js/stickyMsg.js"></script>    
+</body>
+</html>
