@@ -26,16 +26,16 @@ let idOperationResult= document.getElementById("idOperationResult");
 let nroError=0;
 
 const add = (value_a,value_b) => {
-    return ((value_a+value_b).toFixed(4));
+    return ((value_a+value_b).toFixed(2));
 }
 const substract = (value_a,value_b) => {
-    return ((value_a-value_b).toFixed(4));
+    return ((value_a-value_b).toFixed(2));
 }
 const multiply = (value_a,value_b) => {
-    return ((value_a*value_b).toFixed(4));
+    return ((value_a*value_b).toFixed(2));
 }
 const split = (value_a,value_b) => {
-    return ((value_a/value_b).toFixed(4));
+    return ((value_a/value_b).toFixed(2));
 }
 
 const showResult = (operation,result) => {    
@@ -196,7 +196,7 @@ const showMsg = (e) => {
     msg=msg+"-Se permiten Números <strong>Positivos y Negativos</strong> y en caso de que los mismos sean escrito con separadores de miles y decimales, se deberá considerar como separador de miles (.) y de decimales (,); caso contrario recibira una alerta de error. <br><br>";
     msg=msg+"-No estan permitidas las <strong>divisiones por 0 </strong> <br><br>";
     msg=msg+"-El botón <strong>Reset</strong> solo resetea todos los valores menos el historial de errores. <br><br>";
-    msg=msg+"-Los resultados se computan <strong>en 4 decimales</strong> para una mayor precisión.<br><br>";
+    msg=msg+"-Los resultados se computan <strong>en 2 decimales</strong>.<br><br>";
     
     mostrarPopup(msg);
 }
